@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Text To Voice</h1>
+    <textarea name="text" id="text" cols="90" rows="10"></textarea>
+    <button id="btn">🔊 Play</button>
+    <button id="stop-btn">⏹️ Stop</button>
+    <p id="chunks"></p>
+  </body>
+  <script src="t2v.js"></script>
+  <script>
+    const btn = document.getElementById("btn");
+    const stopBtn = document.getElementById("stop-btn");
+    const textArea = document.getElementById("text");
+    btn.addEventListener("click", () => {
+      textToVoice(textArea.value, (lang = "es-MX"));
+    });
+    stopBtn.addEventListener("click", () => {
+      stopTextToVoice();
+    });
+  </script>
+</html>
