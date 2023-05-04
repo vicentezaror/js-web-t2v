@@ -13,6 +13,7 @@ The utility functions are listed below.
 ### textToVoice
 
 Reads text, has no return.
+Language codes references in: https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry
 
 - `text`: string (mandatory)
 - `lang`: string (language code, depends of the languages available in each client web browser)
